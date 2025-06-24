@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hitung Luas Trapesium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Hitung Luas Trapesium</h2>
+        <form id="formTrapesium">
+            <label>Alas Atas (a):</label>
+            <input type="number" id="alas1" required><br>
+            <label>Alas Bawah (b):</label>
+            <input type="number" id="alas2" required><br>
+            <label>Tinggi (t):</label>
+            <input type="number" id="tinggi" required><br>
+            <button type="button" onclick="hitungLuas()">Hitung</button>
+        </form>
+        <h3 id="hasil"></h3>
+    </div>
+
+    <script>
+        function hitungLuas() {
+            const a = parseFloat(document.getElementById("alas1").value);
+            const b = parseFloat(document.getElementById("alas2").value);
+            const t = parseFloat(document.getElementById("tinggi").value);
+            const luas = 0.5 * (a + b) * t;
+            document.getElementById("hasil").innerText = "Luas Trapesium: " + luas;
+        }
+    </script>
+</body>
+</html>
